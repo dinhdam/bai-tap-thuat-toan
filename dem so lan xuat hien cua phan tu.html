@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findSameNum() {
+        let list = [];
+        let input = prompt("Nhập số phần tử của mảng");
+        for (i = 0; i < input; i++) {
+            let value = Math.floor(Math.random() * 100);
+            list.push(value);
+        }
+        console.log(list);
+        ;
+        let findNum = prompt("Nhập số cần tìm: ");
+        let count = 0;
+        for (i in list) {
+            if (list[i] === findNum) {
+                count++;
+            }
+        }
+        console.log("Số lần xuất hiện là: " + count);
+    }
+    findSameNum();
+</script>
+</body>
+</html>
