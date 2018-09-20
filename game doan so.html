@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Game guess the number</title>
+
 </head>
 <body>
-$END$
+<script>
+    let input = prompt("nhap vao cac so cua mang");
+    let randomArray = [];
+    function getRandomArray(){
+        for(i = 0; i <= input; i++){
+            randomArray.push(i);
+        };
+    }
+    function guess_Game(arr){
+        guess = prompt("Ban doan so di ?");
+        let win_num = arr[Math.floor(Math.random() * input)];
+        if(guess === win_num){
+            alert("You win");
+        }else{
+            let retry = prompt("ban doan lai di");
+            guess = retry;
+            if(guess = win_num){
+                alert("You win");
+            }
+            else{
+                alert("You lose");
+            }
+        }
+    }
+    getRandomArray();
+    guess_Game(randomArray);
+</script>
 </body>
+
 </html>
